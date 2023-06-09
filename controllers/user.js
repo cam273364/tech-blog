@@ -10,7 +10,9 @@ function renderSignupPage(req, res) {
 async function registerUser(req, res) {
     const newUser = await User.create(req.body)
     req.session.user = newUser.id
-    res.redirect('/')
+    req.session.save(() => {
+        res.redirect('/')
+    })
 }
 
 async function loginUser(req, res) {
@@ -21,7 +23,17 @@ async function loginUser(req, res) {
        return res.sendStatus(403)
     }
     req.session.user = matchingUser.id
-    res.redirect('/')
+    req.session.save(() => {
+        res.redirect('/')
+    })
+    
+}
+
+function logoutUser(req, res) {
+    req.session.destroy(() => {
+        res.redirect('/')
+    })
+    
     
 }
 
@@ -29,5 +41,6 @@ module.exports = {
     renderSignupPage,
     registerUser,
     renderLoginPage,
-    loginUser
+    loginUser,
+    logoutUser
 }

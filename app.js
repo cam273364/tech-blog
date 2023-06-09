@@ -4,7 +4,7 @@ const express = require('express')
 
 const { engine } = require('express-handlebars')
 const { renderHomePage, renderDashBoard } = require('./controllers/homepage');
-const { renderSignupPage, registerUser, loginUser, renderLoginPage } = require('./controllers/user');
+const { renderSignupPage, registerUser, loginUser, renderLoginPage, logoutUser } = require('./controllers/user');
 const session = require('express-session');
 const { renderCreatePostPage, createPost, viewPost, commentOnPost } = require('./controllers/post');
 const sequelize = require('./config');
@@ -41,9 +41,7 @@ app.get('/viewpost/:id', viewPost)
 
 app.post('/posts/:id/comment', commentOnPost)
 
-app.get('/logout', (req, res) => {
-    res.send('test')
-})
+app.get('/logout', logoutUser)
 
 app.get('/home', (req, res) => {
     res.send('test')

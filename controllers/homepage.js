@@ -16,8 +16,12 @@ async function renderHomePage(req, res) {
     console.log(postData)
     res.render("index", {loggedIn, postData})
 }
+function renderDashBoard(req, res) {
+    res.render('dashboard')
+}
 
 
 module.exports = {
-    renderHomePage
+    renderHomePage,
+    renderDashBoard
 }

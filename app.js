@@ -3,7 +3,7 @@ const express = require('express')
 
 
 const { engine } = require('express-handlebars')
-const { renderHomePage } = require('./controllers/homepage');
+const { renderHomePage, renderDashBoard } = require('./controllers/homepage');
 const { renderSignupPage, registerUser, loginUser, renderLoginPage } = require('./controllers/user');
 const session = require('express-session');
 const { renderCreatePostPage, createPost, viewPost, commentOnPost } = require('./controllers/post');
@@ -53,9 +53,7 @@ app.get('/signin', (req, res) => {
     res.send('signintest')
 })
 
-app.get('/dashboard', (req, res) => {
-    res.send('dashboardtest')
-})
+app.get('/dashboard', renderDashBoard)
 
 
 

@@ -11,7 +11,6 @@
   In order to use this application, a user will need to navigate to the deployed application's URL: https://tech-blog-cam-malone.herokuapp.com/
 
   ### Usage
-  After running npm start, the user is presented with a series of questions to answer about themselves as the team manager. After the manager/user enters their information, they are presented with a menu of options that contain choices on how to manage their teams details.
   When the page loads for the first time, previous user's posts are shown. The user is presented with options to log in or to sign up. Once they have registered a new account or logged into an existing account they have the option to navigate to their dashboard to create a post. 
   ### Contributing
   Cam Malone

@@ -22,11 +22,11 @@ Post.init({
     },
     userid: {
         type: DataTypes.INTEGER,
-        references: { model: 'user', key: 'id' }
+        references: { model: 'users', key: 'id' }
     }
 }, {
     sequelize,
-    modelName: "post"
+    modelName: "posts"
 })
 
 module.exports = Post

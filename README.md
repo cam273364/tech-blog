@@ -8,7 +8,7 @@
   
   
   ### Installation
-  In order to use this application, a user will need to navigate to the deployed application's URL: https://tech-blog-cam-malone.herokuapp.com/![image]
+  In order to use this application, a user will need to navigate to the deployed application's URL: https://tech-blog-cam-malone.herokuapp.com/
 
   ### Usage
   After running npm start, the user is presented with a series of questions to answer about themselves as the team manager. After the manager/user enters their information, they are presented with a menu of options that contain choices on how to manage their teams details.

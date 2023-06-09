@@ -1,0 +1,5 @@
+{{> postCard post}}
+<form method="post" action="/posts/{{post.id}}/comment">
+    <input placeholder="content" name="content"/>
+    <button>Comment</button>
+</form>
